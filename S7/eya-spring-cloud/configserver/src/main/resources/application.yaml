@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    # active: native
+    active : git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/eyaabdelkhalek123-sys/config-repo
+          default-label: main
+          clone-on-start: true
+
+        # native:
+          # search-locations: "classpath:/config"
+          # search-locations: file:///C:/Users/Dell/SOA/eya-spring-cloud/config-repo
+
+
+
+
+server:
+  port: 9999
